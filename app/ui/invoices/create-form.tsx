@@ -10,11 +10,11 @@ import {
 } from '@heroicons/react/24/outline';
 import { Button } from '@/app/ui/button';
 import { createInvoice, State } from '@/app/lib/actions';
-import { useActionState } from 'react';
+import { useFormState } from 'react';
 
 export default function Form({ customers }: { customers: CustomerField[] }) {
   const initialState: State = { message: null, errors: {} };
-  const [state, formAction] = useActionState(createInvoice, initialState); 
+  const [state, formAction] = useFormState(createInvoice, initialState); 
   /* vgb useActionState not working. Try using useFormState */
 
   return (

@@ -1,7 +1,10 @@
 import '@/app/ui/global.css';
 import { inter } from '@/app/ui/fonts';
 import { Metadata } from 'next';
- 
+import SideNav from '@/app/ui/dashboard/sidenav';
+
+export const experimental_ppr = true;
+
 export const metadata: Metadata = {
   title: {
     template: '%s | Acme Dashboard | @victorboxall',

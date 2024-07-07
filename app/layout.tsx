@@ -1,33 +1,15 @@
 import '@/app/ui/global.css';
 import { inter } from '@/app/ui/fonts';
 import { Metadata } from 'next';
-import SideNav from '@/app/ui/dashboard/sidenav';
-
-export const experimental_ppr = true;
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Acme Dashboard | @victorboxall',
-    default: 'Acme Dashboard by @victorboxall',
+    template: '%s | Acme Dashboard',
+    default: 'Acme Dashboard',
   },
-  description: 'The official Next.js Course Dashboard, built with App Router.',
-  metadataBase: new URL('https://nextjs-dashboard-acme.vercel.app'),
-  authors: [{name: 'Victor Boxall', url:'https://www.linkedin.com/in/victorb62/'}],
-  keywords: ['Next.js 14', 'Acme', 'Dashboard', 'nextjs.org/learn', 'Server Actions'],
-  openGraph: {
-    title: 'Acme Dashboard',
-    description: 'The official Next.js Learn Dashboard built with App Router.',
-    url: 'https://nextjs-dashboard-acme.vercel.app',
-    type: 'website',
-  },
-  twitter: {
-    site: '@acme',
-    description:'The official Next.js Learn Dashboard built with App Router.',
-    title:'Acme Dashboard by @victorboxall',
-    creator:'@victorboxall',
-  },
+  description: 'The official Next.js Learn Dashboard built with App Router.',
+  metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
 };
-
 export default function RootLayout({
   children,
 }: {

@@ -6,12 +6,11 @@ import { fetchCustomers, fetchInvoiceById } from '@/app/lib/data';
 import { CustomerField, InvoiceForm } from '@/app/lib/definitions';
 import { notFound } from 'next/navigation';
 
-export default
 export const metadata: Metadata = {
     title: 'Edit Invoice',
-  };
+};
   
-  async function Page({ params }: { params: { id: string } }) {
+async function Page({ params }: { params: { id: string } }) {
 
     const id = params.id;
     const [invoice, customers] : [InvoiceForm | undefined , CustomerField[] | undefined] = await Promise.all([

@@ -6,9 +6,10 @@ import { LatestInvoice } from '@/app/lib/definitions';
 import { fetchLatestInvoices } from '@/app/lib/data';
 
 export default async function LatestInvoices() {
-  const latestInvoices: LatestInvoice[] = await fetchLatestInvoices();
+  const latestInvoices = await fetchLatestInvoices();
+
   return (
-    <div className="flex w-full flex-col md:col-span-4 lg:col-span-4">
+    <div className="flex w-full flex-col md:col-span-4">
       <h2 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
         Latest Invoices
       </h2>
